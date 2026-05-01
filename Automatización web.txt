@@ -1,0 +1,98 @@
+Automatización web
+Selenium
+Q lead Arquitect
+
+Requisitos previos
+Guerkin
+Junit
+BDD
+Programación Básica en Java
+Logica de Programación (importantisimo para Julio)
+
+
+Selenium es una herramienta enfocada en automatización:
+Inspeccionar elementos
+Exploración a nivel navegador
+Exploración propiedades de pagina
+
+
+
+Primero saber como funciona una pagina web, al apretar inspeccionar
+<head>
+<body> lo q nos importa. ya que encontramos el listado de elementos
+
+<tag abribute="value"> Content 
+<p class="foo"> This paragraph
+
+La búsqueda por elementos priorizemos...
+Las búsquedas mas directas son el classname o el id, mas rápido.
+Otro tipo de búsqueda seria por xpath o selector
+Por ejemplo en teoría id y class name pero por seguridad muchas paginas hacen dinamico el cambio de nombre o class name, en la practica se usa xpath o css selector
+
+8 tipos de identificación de elementos
+id
+name
+classname
+tag name
+link text
+partial link text
+css selector
+xpath
+
+En la interfaz de inspeccionar la pagina web...
+Cuando no te conviene por el xpath
+//img[@alt='Udemy' and @loading='lazy']
+
+a nivel de mobile, donde son full elementos y se encontraría bastantes coincidencias, puede usar hermanos y padres
+se podría hablar con el frontend y quedar en un identificador único y no tener varios elementos, pero ojo eso sale del qa proponer tu plan de trabajo
+
+
+Web:
+Abriremos navegador: driver
+import org.openqa.selenium.chrome.ChromeDriver
+WebDriver drive = new ChromeDriver();
+ya no es necesario descargar el driver o eso por lo menos en java
+Formas de navegar
+drive.get("http://for..");
+drive.navigate().to("http:...");
+drive.quit() esatmos haciendo que haga que se elimine todo tipo de navegadoresn para que no haya consumo de memoria
+drive.close() solo los cierra pero sigue existiendo en la memoria
+Tambien puedes editar como puedes ver la pagina web full screen o solo la pagina completa, con esto lo manipulamos...
+maximize()
+fullscreen()
+setsize()
+
+back()
+forward()
+refresh()-> actualizar la pantalla 
+
+Junit accertions
+
+
+
+mvn repository
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.43.0
+
+deacuerdo a la configuración de gradle o kotlin
+
+
+
+Como esta organizado un projecto POM
+files
+.java
+-> pages
+-> steps
+-> runner
+-> hooks
+  -> tendremos el hooks.java file que tendrá nuestras configuraciones con @before como el set up de configuración de tu chromedriver ejem
+features
+-> ejemplo.feature
+
+
+
+
+
+
+
+
+
